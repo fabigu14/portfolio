@@ -1,0 +1,19 @@
+<div class="header" [class.mobile-menu-active]="state">
+    <div class="intro">
+        <div class="intro-txt">
+            <h1 class="headline">Hi,<br> I'm <span class="name">Fabian</span> Gurth <br> Front end develop<span class="e">e</span>r
+            </h1>
+            <button (click)="setAnchor('contact')">Contact me</button>
+        </div>
+        <div>
+            <img class="profil-img" src="assets/img/fabi.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="arrow-center">
+        <div (click)="setAnchor('skills')" class="arrow-div">
+            <i class="arrow down"></i>
+        </div>
+    </div>
+
+</div>

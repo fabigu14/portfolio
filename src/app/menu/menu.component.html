@@ -1,0 +1,24 @@
+<nav [class.dark-menu]="darkmode" class="menu">
+    <img [class.invert]="darkmode" class="logo" routerLink='/' src="assets/img/logo_bold.png" alt="logo">
+    <div class="links">
+        <a routerLink='/'>HOME</a>
+        <a routerLink='/' (click)="setAnchor('about')">ABOUT</a>
+        <a routerLink='/' (click)="setAnchor('projects')">PORTFOLIO</a>
+
+    </div>
+    <div *ngIf="mobile" class="mobile-menu">
+        <div (click)="setState()" class="burger-menu">
+            <span [class.rotate-to-x-1]="burgerMenuActive"></span>
+            <span [class.rotate-to-x-2]="burgerMenuActive"></span>
+            <span [class.rotate-to-x-3]="burgerMenuActive"></span>
+        </div>
+
+        <div [class.dropdown]="burgerMenuActive" [class.dark-menu]="darkmode" class="mobile-links">
+            <a routerLink='/' (click)="setState()">HOME</a>
+            <a routerLink='/' (click)="setState()" (click)="setAnchor('about')">ABOUT</a>
+            <a routerLink='/' (click)="setState()" (click)="setAnchor('projects')">PORTFOLIO</a>
+        </div>
+
+    </div>
+
+</nav>

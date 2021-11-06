@@ -1,0 +1,51 @@
+<div class="project-section">
+    <h2>My work</h2>
+    <div class="prjct-selection">
+
+        <button data-filter="all" [class.btn-active]="buttons[0]['isActive']" (click)="filterProjects('all')">All</button>
+        <button data-filter="angular" [class.btn-active]="buttons[1]['isActive']" (click)="filterProjects('angular')">Angular</button>
+        <button data-filter="js" [class.btn-active]="buttons[2]['isActive']" (click)="filterProjects('js')">Java Script</button>
+    </div>
+
+    <div class="overflow-hidden">
+        <div class="projects" [class.move-up]="moveUpAnimation">
+            <div *ngIf="projects[1].isActive" class="project">
+            <img src="assets/img/el_pollo_loco.png" alt="img">
+            <div class="overlay">
+                <h3>El Pollo Loco</h3>
+                <span>JavaScript -based jump and run game.</span>
+                <a href="https://fabiangurth.de/El_POLLO_LOCO">Try out</a>
+            </div>
+        </div>
+        <div *ngIf="projects[1].isActive" class="project">
+            <img src="assets/img/join.png" alt="img">
+            <div class="overlay">
+                <h3>Join</h3>
+                <span>Canban tool for group projects.</span>
+                <a href="https://fabiangurth.de/Join/html/login-submit.html">Try out</a>
+            </div>
+        </div>
+        <div *ngIf="projects[0].isActive" class="project">
+            <img src="assets/img/ringoffire.png" alt="img">
+            <div class="overlay">
+                <h3>Ring of fire</h3>
+                <span>Angular based card game.</span>
+                <a href="https://fabiangurth.de/ringoffire">Try out</a>
+            </div>
+        </div>
+        <div *ngIf="projects[1].isActive" class="project">
+            <img src="assets/img/pokedex.png" alt="img">
+            <div class="overlay">
+                <h3>Pokédex</h3>
+                <span>Fun with Pokémon and data from an API</span>
+                <a href="https://fabiangurth.de/pokedex/pokedex.html">Try out</a>
+            </div>
+        </div>
+    
+    </div>
+
+    
+
+
+    </div>
+</div>
