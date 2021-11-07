@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,11 +6,29 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'fabiangurth';
   burgerMenuActive: boolean;
+  emailSent = false;
 
   constructor(public router: Router ) {}
+
+  ngOnInit(): void {
+    let deliveryState  = JSON.parse(localStorage.getItem('deliveryState'));
+
+    if (deliveryState) {
+      this.showSnackbar();
+    }
+  }
+
+  showSnackbar(){
+    this.emailSent = true;
+
+    setTimeout(() => {
+      this.emailSent = false;
+      localStorage.setItem('deliveryState', JSON.stringify(this.emailSent));
+    }, 3000);
+  }
 
   scroll(anchor: string): void {
     let el = document.getElementById(anchor);

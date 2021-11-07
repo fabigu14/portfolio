@@ -1,2 +1,3 @@
 <app-menu [darkmode]="router.url !== '/'" (anchorElement)="scroll($event)"></app-menu>
 <router-outlet></router-outlet>
+<div [class.show]="emailSent" id="snackbar_created">Email has been sent</div>
