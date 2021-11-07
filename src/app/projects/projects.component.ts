@@ -44,7 +44,7 @@ export class ProjectsComponent {
     setTimeout(() => {
       this.setProjectState();
       this.moveUpAnimation = false;
-    }, 225);
+    }, 500);
   }
 
   

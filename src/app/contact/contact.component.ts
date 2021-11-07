@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  emailSent = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  setDeliveryState(){
+    this.emailSent = true;
+    localStorage.setItem('deliveryState', JSON.stringify(this.emailSent));
   }
 
 }

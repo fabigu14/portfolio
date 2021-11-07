@@ -36,12 +36,13 @@
     grid-gap: 35px;
     grid-template-columns: auto auto;
     width: 835px;
-    transition: all 125ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .move-up{
-    transition: all 225ms ease-in-out;
+    transition: all 500ms ease-in-out;
     transform: translateY(-800px);
+    opacity: 0;
 }
 
 .overflow-hidden{
@@ -108,6 +109,10 @@
     .projects {
         grid-template-columns: auto;
         width: fit-content;
+    }
+
+    .move-up{
+        opacity: 0;
     }
 }
 
