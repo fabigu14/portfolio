@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.emailSent = false;
       localStorage.setItem('deliveryState', JSON.stringify(this.emailSent));
-    }, 3000);
+    }, 2500);
   }
 
   scroll(anchor: string): void {
